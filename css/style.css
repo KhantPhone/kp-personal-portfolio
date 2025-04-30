@@ -399,7 +399,14 @@ nav .active {
 	transition: all .4s;
 	border-radius: 5px;
 	font-size: 2.5rem;
+	display: inline-block;
+	animation: upDown 1s infinite ease-in-out;
 
+}
+
+.to-top:hover img{
+	transition: 1s ease;
+	margin-bottom: 4rem!important;
 }
 @media screen and (max-width: 768px){
 	.to-top{
