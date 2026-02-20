@@ -141,11 +141,11 @@ var typed = new Typed('.typed1',{
 			var email = $('#email').val();
 			var subject = $('#subject').val();
 			if (email == '' || subject == '') {
-				swal("", "Please enter missing fields!", "error");
+				swal("", "必須項目を入力してください!", "error");
 
 			}
 			else{
-				swal("","Your email has been sent!","success");
+				swal("","送信が完了しました。!","success");
 			}
 		});
 
