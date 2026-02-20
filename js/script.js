@@ -85,7 +85,7 @@ var typed = new Typed('.typed1',{
 	strings:[
 	'カントポンです。',
 	'Web開発者です。',
-	'フロントエンジニアです。'
+	'エンジニアです。'
 	],
 	typeSpeed:50,
 	backSpeed:50,
@@ -199,3 +199,39 @@ var typed = new Typed('.typed1',{
 	  		swal("", "Successfully changed to PINK!", "success");
 		});
 
+
+		const io = new IntersectionObserver(entries => {
+			entries.forEach(e => {
+				if (e.isIntersecting) {
+					document.querySelectorAll('.count-val').forEach(el => {
+						let start = null;
+						const target = +el.dataset.target;
+						const ease = t => t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
+						function step(ts) {
+							if (!start) start = ts;
+							const p = Math.min((ts - start) / 2000, 1);
+							el.textContent = Math.floor(ease(p) * target);
+							if (p < 1) requestAnimationFrame(step);
+							else el.textContent = target;
+						}
+						requestAnimationFrame(step);
+					});
+					io.disconnect();
+				}
+			});
+		}, { threshold: 0.4 });
+		const statsRow = document.getElementById('statsRow');
+		if (statsRow) io.observe(statsRow);
+
+		/* nav scroll spy */
+		const sections = document.querySelectorAll('section[id]');
+		window.addEventListener('scroll', () => {
+			let current = '';
+			sections.forEach(s => {
+				if (window.scrollY >= s.offsetTop - 100) current = s.id;
+			});
+			document.querySelectorAll('.nav-link').forEach(a => {
+				a.classList.remove('active');
+				if (a.classList.contains(current)) a.classList.add('active');
+			});
+		});
