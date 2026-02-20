@@ -83,9 +83,9 @@
 
 var typed = new Typed('.typed1',{
 	strings:[
-	'Khant Phone.',
-	'Web developer.',
-	'Freelancer.'
+	'カントポンです。',
+	'Web開発者です。',
+	'フロントエンジニアです。'
 	],
 	typeSpeed:50,
 	backSpeed:50,
