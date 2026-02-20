@@ -252,7 +252,7 @@ nav .active {
 		font-size: 29px!important;
 	}
 	#info .extra-text{
-		font-size: 19px!important;
+		font-size: 17px!important;
 	}
 }
 /*intro*/
@@ -296,11 +296,14 @@ nav .active {
 }
 
 @media screen and (max-width: 768px){
+	#info p{
+		font-size: 18px;
+	}
 	#intro {
 		margin-top: 1rem;
 	}
 	#intro p {
-		font-size: 16px;
+		font-size: 15px;
 	}
 	#intro img{
 		margin-left: 0;
@@ -758,13 +761,12 @@ nav .active {
 }
 /*services*/
 
-#services .card{
-	background: #FFF;
+#services .card{	
 	box-shadow: 0 1px 15px 0 rgba(0,0,25,0.1);
 	transition: 1s ease;
 	border-radius: 5px;
-	
-
+	background-color: #f7f4ef!important;
+	margin-top: 2.5em!important;
 }
 #services .card:hover{
 	background-color: var(--custom-bg);
@@ -786,6 +788,14 @@ nav .active {
 	
 }
 @media screen and (max-width: 768px){
+		
+	#services .card{	
+		box-shadow: 0 1px 15px 0 rgba(0,0,25,0.1);
+		transition: 1s ease;
+		border-radius: 5px;
+		background-color: #f7f4ef!important;
+		margin-top: 0em!important;
+	}
 	#services .card h3{
 	font-size: 18px;	
 		}
@@ -796,10 +806,6 @@ nav .active {
 #services .card:hover > img{	
 	transform: translateY(0%);
 }
-}
-#services .card{
-	background-color: #f7f4ef!important;
-	margin-top: 3.5em;
 }
 
 #myskills {
